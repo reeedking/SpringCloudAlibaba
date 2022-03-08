@@ -49,6 +49,7 @@
     <modules>
         <module>cloudAlibaba-nacos-9001</module>
         <module>cloudalibaba-consumer-nacos-8083</module>
+        <module>cloudalibaba-config-3377</module>
     </modules>
 
 </project>
