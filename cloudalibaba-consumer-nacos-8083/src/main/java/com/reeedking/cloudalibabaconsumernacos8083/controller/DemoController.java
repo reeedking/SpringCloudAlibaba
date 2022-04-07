@@ -1,7 +1,9 @@
 package com.reeedking.cloudalibabaconsumernacos8083.controller;
 
+import com.reeedking.cloudalibabacommons.entity.JsonResult;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -25,5 +27,11 @@ public class DemoController {
     public String getDiscovery() {
         System.err.println(serverURL);
         return restTemplate.getForObject(serverURL + "/reeedking", String.class);
+    }
+
+    @GetMapping("/consumer/fallback/{id}")
+    public JsonResult<String> fallback(@PathVariable Long id) {
+        JsonResult<String> result = restTemplate.getForObject(serverURL + "/info/" + id, JsonResult.class);
+        return result;
     }
 }
