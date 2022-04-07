@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.2.RELEASE</version>
+        <version>2.2.3.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.reeedking</groupId>
@@ -50,6 +50,7 @@
         <module>cloudAlibaba-nacos-9001</module>
         <module>cloudalibaba-consumer-nacos-8083</module>
         <module>cloudalibaba-config-3377</module>
+        <module>cloudalibaba-sentinel-service-8401</module>
     </modules>
 
 </project>
