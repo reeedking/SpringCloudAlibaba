@@ -1,5 +1,6 @@
 package com.reeedking.cloudalibabanacos9001.controller;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.reeedking.cloudalibabacommons.entity.JsonResult;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,8 +34,8 @@ public class DataController {
     }
 
     @GetMapping("info/{id}")
-    public JsonResult<String> msbSql(@PathVariable("id") Long id) {
-        JsonResult<String> result = new JsonResult(1, hashMap.get(id));
+    public JsonResult<String> msbSql(@PathVariable("id") String id) {
+        JsonResult<String> result = new JsonResult(200, hashMap.get(Integer.parseInt(id)));
         return result;
     }
 
