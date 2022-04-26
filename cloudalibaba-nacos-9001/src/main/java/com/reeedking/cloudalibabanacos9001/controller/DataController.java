@@ -35,7 +35,7 @@ public class DataController {
 
     @GetMapping("info/{id}")
     public JsonResult<String> msbSql(@PathVariable("id") String id) {
-        JsonResult<String> result = new JsonResult(200, hashMap.get(Integer.parseInt(id)));
+        JsonResult<String> result = new JsonResult(200, serverPort + hashMap.get(Integer.parseInt(id)));
         return result;
     }
 
